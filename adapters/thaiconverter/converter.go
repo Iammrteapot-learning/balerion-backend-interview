@@ -61,7 +61,8 @@ func convertNumber(num int) string {
 	}
 
 	result := []string{}
-	pos := 0 // หน่วย
+	// Position
+	pos := 0
 
 	for num > 0 {
 		digit := num % 10
@@ -70,7 +71,9 @@ func convertNumber(num int) string {
 			number := thaiNumbers[digit]
 
 			// Special cases
-			if pos == 1 { // Tens position
+
+			// Tens position
+			if pos == 1 {
 				if digit == 1 {
 					number = ""
 				} else if digit == 2 {
@@ -78,8 +81,11 @@ func convertNumber(num int) string {
 				}
 			}
 
-			if pos == 0 && digit == 1 { // Ones position
+			// Ones position
+			if pos == 0 && digit == 1 {
 				number = "เอ็ด"
+
+				// Case tens position is zero
 				if num > 100 && (num/10)%10 == 0 {
 					number = "หนึ่ง"
 				}

@@ -1,4 +1,4 @@
-module github.com/Iammrteapot-learning/balerion-backend-interview
+module github.com/iammrteapot-learning/balerion-backend-interview
 
 go 1.21.4
 
